@@ -1,10 +1,10 @@
 export type Movie = {
   id: number;
-  title: string;
+  movie: string;
   platform: string;
   status: boolean;
 };
 
 export type CreateMovie = Omit<Movie, "id" | "status">;
 
-export type UpdateMovie = Omit<Movie, "id">;
+export type UpdateMovie = Omit<Movie, "movie" | "platform">;

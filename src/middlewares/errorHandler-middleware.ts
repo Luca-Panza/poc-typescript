@@ -7,7 +7,7 @@ export default function errorHandler(error: CustomError, req: Request, res: Resp
     return res.status(httpStatus.CONFLICT).send(error.message);
   }
 
-  if (error.type === "NotFoundError") {
+  if (error.type === "ConflictError") {
     return res.status(httpStatus.NOT_FOUND).send(error.message);
   }
 
